@@ -30,8 +30,7 @@ System.register(['angular2/core', 'angular2/common', './usernameValidators'], fu
                         username: ['', common_1.Validators.compose([
                                 common_1.Validators.required,
                                 usernameValidators_1.UsernameValidators.cannotContainSpace
-                            ])
-                        ],
+                            ]), usernameValidators_1.UsernameValidators.shouldBeUnique],
                         password: ['', common_1.Validators.required]
                     });
                 }
@@ -47,10 +46,9 @@ System.register(['angular2/core', 'angular2/common', './usernameValidators'], fu
                         selector: 'signup-form',
                         templateUrl: 'app/signup-form.component.html'
                     }), 
-                    __metadata('design:paramtypes', [(typeof (_a = typeof common_1.FormBuilder !== 'undefined' && common_1.FormBuilder) === 'function' && _a) || Object])
+                    __metadata('design:paramtypes', [common_1.FormBuilder])
                 ], SignUpFormComponent);
                 return SignUpFormComponent;
-                var _a;
             }());
             exports_1("SignUpFormComponent", SignUpFormComponent);
         }
