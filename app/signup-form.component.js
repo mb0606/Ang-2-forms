@@ -39,7 +39,14 @@ System.register(['angular2/core', 'angular2/common', './usernameValidators'], fu
                 //     password: new Control('', Validators.required)
                 // });
                 SignUpFormComponent.prototype.signup = function () {
+                    this.form.find('username').setErrors({
+                        invalidLogin: true
+                    });
                     console.log(this.form.value);
+                };
+                SignUpFormComponent.prototype.log = function (user) {
+                    console.log(user);
+                    console.log("hello");
                 };
                 SignUpFormComponent = __decorate([
                     core_1.Component({

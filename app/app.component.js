@@ -1,4 +1,4 @@
-System.register(['angular2/core', './signup-form.component', "./contact-form.component", "./subscription-form.component"], function(exports_1, context_1) {
+System.register(['angular2/core', "./contact-form.component", "./subscription-form.component", "./change-password-form.component"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,21 +10,21 @@ System.register(['angular2/core', './signup-form.component', "./contact-form.com
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, signup_form_component_1, contact_form_component_1, subscription_form_component_1;
+    var core_1, contact_form_component_1, subscription_form_component_1, change_password_form_component_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (signup_form_component_1_1) {
-                signup_form_component_1 = signup_form_component_1_1;
-            },
             function (contact_form_component_1_1) {
                 contact_form_component_1 = contact_form_component_1_1;
             },
             function (subscription_form_component_1_1) {
                 subscription_form_component_1 = subscription_form_component_1_1;
+            },
+            function (change_password_form_component_1_1) {
+                change_password_form_component_1 = change_password_form_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -33,10 +33,8 @@ System.register(['angular2/core', './signup-form.component', "./contact-form.com
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        directives: [signup_form_component_1.SignUpFormComponent,
-                            contact_form_component_1.ContactFormComponent,
-                            subscription_form_component_1.SubscriptionFormComponent],
-                        template: "\n        <div class=\"container\">\n            <div class=\"row\">\n                <my-contact-form></my-contact-form>\n                <subscription-form></subscription-form>\n                <signup-form></signup-form>\n\n            </div>\n        </div>\n    "
+                        directives: [contact_form_component_1.ContactFormComponent, subscription_form_component_1.SubscriptionFormComponent, change_password_form_component_1.ChangePasswordFormComponent],
+                        template: "\n       <div class=\"container\">\n           <h1>This is in the App component</h1>\n           <h1>Contact</h1>\n           <my-contact-form></my-contact-form>\n           <h1>Subscription</h1>\n           <subscription-form></subscription-form>\n           <h1>Change Password Form</h1>\n           <change-password-form></change-password-form>\n       </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

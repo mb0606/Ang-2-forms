@@ -23,7 +23,15 @@ export class SignUpFormComponent {
     // });
 
     signup(){
+        this.form.find('username').setErrors({
+            invalidLogin:true
+        })
         console.log(this.form.value)
+
+    }
+    log(user){
+        console.log(user)
+        console.log("hello")
 
     }
 }
